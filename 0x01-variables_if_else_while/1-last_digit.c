@@ -28,7 +28,7 @@ int main(void)
 			else
 			{
 				printf("Last digit of %d is %d and", n, n % 10);
-				printf("is less than 6 and not 0\n");
+				printf(" is less than 6 and not 0\n");
 			}
 		}
 	return (0);
