@@ -19,12 +19,26 @@ void times_table(void)
 			n = i * j;
 			f = n / 10;
 			l = n % 10;
-			if (n >= 10)
+			if (n >= 9)
 			{
+				if (n != 9)
+				{
+					_putchar(l + 48);
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+				}
+				else
+				{
+					_putchar(l + 48);
+					_putchar(' ');
 				_putchar(f + 48);
+				}
+
 			}
 			_putchar(l + 48);
 			_putchar(',');
+			_putchar(' ');
 			_putchar(' ');
 		}
 		_putchar('\n');
