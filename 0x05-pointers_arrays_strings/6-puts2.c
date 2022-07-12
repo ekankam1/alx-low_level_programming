@@ -15,11 +15,11 @@ void puts2(char *str)
 	{
 		if (str[count] == '\0')
 		{
-			printf('\n');
+			_putchar('\n');
 			break;
 		}
 		if (count % 2 == 0)
-			printf(str[count]);
+			_putchar(str[count]);
 		count++;
 	}
 }
