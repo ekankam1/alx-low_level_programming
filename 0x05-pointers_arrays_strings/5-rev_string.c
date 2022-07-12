@@ -18,5 +18,6 @@ void rev_string(char *s)
 	for (i = 0; i < mySize; i++)
 	{
 		s--;
+		s[i] = *s;
 	}
-
+}
