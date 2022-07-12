@@ -9,26 +9,17 @@
  */
 void puts2(char *str)
 {
-	int mySize = 0;
-	int i = 0;
-	int half;
+	int count = 0;
 
-	while (*str != '\0')
+	while (count >= 0)
 	{
-		mySize++;
-		str++;
-	}
-	if (mySize % 2 == 0)
-	{
-	half = mySize / 2;
-	}
-	else
-	{
-	half = (mySize + 1) / 2;
-	}
-	for (i = 0; i < half; i++)
-	{
-		printf("%c", *str);
-			str += 2;
+		if (str[count] == '\0')
+		{
+			printf('\n');
+			break;
+		}
+		if (count % 2 == 0)
+			printf(str[count]);
+		count++;
 	}
 }
