@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+/**
+ * main - generates random passwords
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+	int r = 0, c = 0;
+	time_t t;
+
+	srand((unsigned int) time(&t));
+
+	while (c < 2000)
+	{
+		r = rand() % 150;
+		if ((c + r) > 2000)
+			break;
+		c = c +r;
+		printf("%c", r);
+	}
+	printf("%\n", (2000 - c));
+	return (0);
+}
