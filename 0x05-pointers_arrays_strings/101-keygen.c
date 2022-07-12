@@ -21,6 +21,6 @@ int main(void)
 		c = c +r;
 		printf("%c", r);
 	}
-	printf("%\n", (2000 - c));
+	printf("%c\n", (2000 - c));
 	return (0);
 }
