@@ -1,7 +1,6 @@
-#include "main.H"
+#include "main.h"
 #include <stdio.h>
 
-int <stdio.h>
 
 int main(void)
 {
@@ -10,7 +9,7 @@ int main(void)
 	r = is_prime_number(1);
 	printf("%d\n", r);
 	r = is_prime_number(1024);
-	print("%d\n", r);
+	printf("%d\n", r);
 	r = is_prime_number(16);
 	printf("%d\n", r);
 	r = is_prime_number(17);
