@@ -1,47 +1,26 @@
 #include "lists.h"
 
 /**
- * delete_nodeint_at_index - deletes the node at index
- * of a linked list.
+ * add_nodeint - add a new node at the beginning
+ * of a linked list
  * @head: head of a list.
- * @index: index of the list where the node is
- * deleted.
+ * @n: n element.
  *
- * Return: 1 if it succeeded, -1 if it failed.
+ * Return: address of the new element. NUll if it failed.
  */
-int delete_nodeint_at_index(listint_t **head, unsigned int index)
+listint_t *add_nodeint(listint_t **head, const int n)
 {
-	unsigned int i;
-	listint_t *prev;
-	listint_t *next;
+	listint_t *new;
 
-	prev = *head;
 
-	if (index != 0)
-	{
-		for (i = 0; i < index - 1 && prev != NULL; i++)
-		{
-			prev = prev->next;
-		}
-	}
+	new = malloc(sizeof(listint_t));
 
-	if (prev == NULL || (prev->next == NULL && index != 0))
-	{
-		return (-1);
-	}
+	if (new == NULL)
+		return (NULL);
 
-	next = prev->next;
+	new->n = n;
+	new->next = *head;
+	*head = new;
 
-	if (index != 0)
-	{
-		prev->next = next->next;
-		free(next);
-	}
-	else
-	{
-		free(prev);
-		*head = next;
-	}
-
-	return (1);
+	return (*head);
 }
